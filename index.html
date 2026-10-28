@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oakridge Product Suite by Li Snyder</title>
+<meta name="description" content="A store operations app and self-building daily deployment, designed and built by Li Snyder for the Oakridge Park store team.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Oakridge Product Suite by Li Snyder">
+<meta property="og:description" content="A store operations app and self-building daily deployment, designed and built by Li Snyder for the Oakridge Park store team.">
+<meta property="og:image" content="https://leegordonsnyder.github.io/portfolio/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: 11in 8.5in; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --ink: #1D1D1F; --ink2: #515154; --ink3: #86868b; --accent: #9b4a63; --line: #e8e8ed; }
+body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; background: #fff; }
+.page { width: 11in; height: 8.5in; padding: 40px 44px 30px; position: relative; overflow: hidden; page-break-after: always; display: flex; flex-direction: column; }
+h1, h2, h3 { font-family: "Inter Display", "Inter", sans-serif; letter-spacing: -0.02em; }
+.kicker { font-size: 11.5px; font-weight: 700; color: var(--accent); letter-spacing: .1em; text-transform: uppercase; }
+.mh h2 { font-size: 30px; font-weight: 700; margin-top: 4px; }
+.mh .lede { font-size: 13.5px; color: var(--ink2); margin-top: 6px; max-width: 900px; line-height: 1.45; }
+.mh .lede b { color: var(--ink); font-weight: 600; }
+.tag { font-family: "Inter"; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 99px; padding: 3px 9px; vertical-align: 6px; }
+.row { flex: 1; display: flex; justify-content: space-between; align-items: center; gap: 28px; margin-top: 4px; padding-bottom: 14px; }
+.row.three { align-items: flex-start; margin-top: 16px; }
+.side { display: flex; gap: 38px; align-items: center; width: 49.5%; } .side .legend { flex: 1; }
+.below { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; width: 30%; }
+.below .pw { margin-left: 8px; }
+.phone { position: relative; flex: none; border: 5px solid #1d1d1f; border-radius: 30px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.12); background: #000; }
+.phone img { display: block; width: 100%; }
+.hl { position: absolute; border: 2.5px solid var(--accent); border-radius: 10px; box-shadow: 0 0 0 2px rgba(255,255,255,.85); }
+.hl.sq { border-radius: 3px; border-width: 2.5px; }
+.pw { position: relative; flex: none; }
+.pin.out { left: calc(100% + 7px); }
+.pin { position: absolute; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; display: grid; place-items: center; box-shadow: 0 0 0 2px #fff, 0 2px 6px rgba(0,0,0,.25); }
+.legend { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.legend li { display: flex; gap: 10px; font-size: 12.5px; line-height: 1.4; color: var(--ink2); }
+.legend li b { color: var(--ink); font-weight: 600; }
+.legend .n { flex: none; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; margin-top: -1px; }
+.below .legend { width: 100%; padding: 0 4px; }
+.sheetrow { flex: 1; display: flex; gap: 24px; align-items: center; margin-top: 8px; }
+.sheetrow .legend { flex: 1; }
+.sheet { position: relative; flex: none; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 8px 26px rgba(0,0,0,.10); }
+.sheet img { display: block; width: 100%; }
+.sheetwide { margin-top: 18px; }
+.sheetfull { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 12px; }
+.legend.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 24px; width: 100%; }
+.fit { display: flex; gap: 40px; margin-top: 24px; }
+.fit .legend { width: 36%; }
+.built { flex: 1; border-left: 1px solid var(--line); padding-left: 32px; }
+.built h3 { font-size: 17px; margin-bottom: 10px; }
+.built ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.built li { font-size: 12.5px; line-height: 1.45; color: var(--ink2); padding-left: 14px; position: relative; }
+.built li::before { content: ""; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.built li b { color: var(--ink); font-weight: 600; }
+footer { position: absolute; left: 44px; right: 44px; bottom: 18px; display: flex; justify-content: space-between; font-size: 10px; color: var(--ink3); letter-spacing: .04em; }
+.cover { flex-direction: row; align-items: center; padding: 50px 56px; background: radial-gradient(ellipse at 78% 50%, #f7eef1 0%, #fff 62%); }
+.cv-text { width: 47%; }
+.cover h1 { font-size: 50px; font-weight: 700; line-height: 1.02; margin-top: 10px; }
+.byline { font-family: "Inter Display", "Inter", sans-serif; font-size: 22px; font-weight: 600; color: var(--accent); margin-top: 8px; letter-spacing: -0.01em; }
+.cv-sub { font-size: 18px; line-height: 1.4; margin-top: 16px; font-weight: 500; }
+.cv-body { font-size: 13px; line-height: 1.55; color: var(--ink2); margin-top: 14px; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 26px; }
+.stats div { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; background: rgba(255,255,255,.8); }
+.stats b { display: block; font-family: "Inter Display"; font-size: 22px; color: var(--accent); letter-spacing: -0.01em; }
+.stats b i { font-style: normal; font-size: 14px; color: var(--ink3); font-weight: 500; }
+.stats span { display: block; font-size: 11.5px; color: var(--ink2); margin-top: 3px; line-height: 1.35; }
+.cv-phones { flex: 1; position: relative; height: 100%; }
+.cv-phones .p { position: absolute; }
+.p1 { left: 10px; top: 120px; transform: rotate(-6deg); }
+.p3 { right: 0; top: 120px; transform: rotate(6deg); }
+.p2 { left: 50%; top: 40px; transform: translateX(-50%); z-index: 2; }
+.note { position: absolute; left: 56px; bottom: 22px; font-size: 10px; color: var(--ink3); }
+
+html { background: #f5f5f7; }
+body { background: #f5f5f7; }
+.bar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: rgba(255,255,255,.88); backdrop-filter: saturate(1.8) blur(14px); -webkit-backdrop-filter: saturate(1.8) blur(14px); border-bottom: 1px solid var(--line); }
+.bar .t { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar .t span { color: var(--ink3); font-weight: 500; }
+.bar a { flex: none; font-size: 13px; font-weight: 600; color: #fff; background: var(--accent); padding: 8px 14px; border-radius: 99px; text-decoration: none; }
+.hint { display: none; text-align: center; font-size: 13px; color: var(--ink2); padding: 14px 16px 0; }
+@media (max-width: 700px) { .hint { display: block; } }
+.deck { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 22px 16px 48px; }
+.slot { width: 100%; max-width: 1056px; aspect-ratio: 1056 / 816; position: relative; }
+.slot > .page { position: absolute; top: 0; left: 0; transform-origin: top left; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.08); background-color: #fff; }
+.slot > .page.cover { background: radial-gradient(ellipse at 78% 50%, #f7eef1 0%, #fff 62%); }
+</style></head><body>
+<div class="bar"><div class="t">Oakridge Product Suite <span>by Li Snyder</span></div><a href="Oakridge-Product-Suite.pdf" download>Download PDF</a></div>
+<p class="hint">Best on a larger screen. Pinch to zoom, or download the PDF.</p>
+<main class="deck"><div class="slot">
+<section class="page cover">
+  <div class="cv-text">
+    <div class="kicker">Store operations · Oakridge Park</div>
+    <h1>Oakridge Product Suite</h1>
+    <p class="byline">by Li Snyder</p>
+    <p class="cv-sub">A store operations app I designed and built for the Oakridge Park team, plus a daily deployment for managers that builds itself.</p>
+    <p class="cv-body">It replaced printouts, whiteboards and paper copies that didn't update each other with one shared system. Associates use it on the store iPhones for product lookup, counts, consolidations, receiving and floor stock. Everything lands in one shared Google Sheet.</p>
+    <div class="stats">
+      <div><b>5 + Home</b><span>focused modules in place of 7 tabs and paper systems</span></div>
+      <div><b>1:06 <i>vs</i> 3:25</b><span>receiving 5 boxes, app vs by hand, in testing</span></div>
+      <div><b>Offline</b><span>installs from the web on store iPhones, no app store</span></div>
+      <div><b>$0</b><span>to run, on GitHub Pages and Google Sheets</span></div>
+    </div>
+  </div>
+  <div class="cv-phones">
+    <div class="p p1"><div class="pw" style="width:220px"><div class="phone" style="width:220px"><img src="img/04-catalog-detail.jpg"></div></div></div>
+    <div class="p p2"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/01-home.jpg"></div></div></div>
+    <div class="p p3"><div class="pw" style="width:220px"><div class="phone" style="width:220px"><img src="img/16-receiving-awaiting.jpg"></div></div></div>
+  </div>
+  <p class="note">App screens show sample data. Staff names and sales figures in the Google Sheets screenshots are blurred.</p>
+</section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">01 · Home</div><h2>One screen to start the shift</h2><p class="lede">What’s yours today and what needs doing, without opening every tab.</p></header><div class="row"><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/01-home.jpg"><div class="hl" style="left:4.071246819338422%;top:19.131455399061036%;width:91.85750636132316%;height:46.12676056338028%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:66.90140845070422%;width:91.85750636132316%;height:12.323943661971832%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:85.56338028169014%;width:91.85750636132316%;height:14.43661971830986%"></div>
+      <div class="hl" style="left:0%;top:92.84037558685446%;width:100%;height:7.159624413145541%"></div>
+      </div><div class="pin out" style="top:114.68956743002545px">1</div><div class="pin out" style="top:373.59541984732823px">2</div><div class="pin out" style="top:474.74045801526717px">3</div><div class="pin out" style="top:514.1806615776081px">4</div></div><ol class="legend"><li><span class="n">1</span><span><b>Your shift today:</b> roles, breaks and a live “now” marker, read from the auto-built deployment</span></li><li><span class="n">2</span><span><b>One-tap scanning</b> for the three most common jobs</span></li><li><span class="n">3</span><span><b>Needs attention:</b> the app finds slipped work on its own</span></li><li><span class="n">4</span><span><b>Five focused modules</b> replace seven tabs</span></li></ol></div><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/02-home-exceptions.jpg"><div class="hl" style="left:4.071246819338422%;top:8.215962441314554%;width:91.85750636132316%;height:20.539906103286384%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:29.929577464788732%;width:91.85750636132316%;height:18.30985915492958%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:76.17370892018779%;width:91.85750636132316%;height:23.826291079812208%"></div>
+      </div><div class="pin out" style="top:55.529262086513995px">5</div><div class="pin out" style="top:173.21374045801528px">6</div><div class="pin out" style="top:423.8498727735369px">7</div></div><ol class="legend"><li><span class="n">5</span><span>Boxes on the shelf but <b>not yet received in MAO</b>, with how long they’ve waited</span></li><li><span class="n">6</span><span>Counts off by more than 2 units or 5%, <b>flagged for a recount</b></span></li><li><span class="n">7</span><span><b>Weekly KPIs:</b> count accuracy and open consolidation lines</span></li></ol></div></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>2</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">02 · Product Catalog</div><h2>Hard-tag placement everyone can find</h2><p class="lede"><b>Before:</b> hard-tag printouts on a wall, with exceptions passed on by word of mouth. <b>Now:</b> one searchable source of truth.</p></header><div class="row"><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/03-catalog-search.jpg"><div class="hl" style="left:4.071246819338422%;top:19.131455399061036%;width:65.39440203562341%;height:5.164319248826291%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:25.46948356807512%;width:91.85750636132316%;height:33.92018779342723%"></div>
+      </div><div class="pin out" style="top:114.68956743002545px">1</div><div class="pin out" style="top:149.0407124681934px">2</div></div><ol class="legend"><li><span class="n">1</span><span><b>One search</b> for SKU, UPC, style or name, or scan the barcode</span></li><li><span class="n">2</span><span>Every colour and size, with its UPC, in one list</span></li></ol></div><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/04-catalog-detail.jpg"><div class="hl" style="left:7.888040712468193%;top:55.04694835680751%;width:84.22391857506362%;height:20.070422535211268%"></div>
+      <div class="hl" style="left:7.888040712468193%;top:83.09859154929578%;width:45.80152671755725%;height:5.164319248826291%"></div>
+      </div><div class="pin out" style="top:309.3460559796438px">3</div><div class="pin out" style="top:461.381679389313px">4</div></div><ol class="legend"><li><span class="n">3</span><span><b>Hard-tag placement:</b> where the security tag goes, set once for the whole team</span></li><li><span class="n">4</span><span>Start a count straight from the product page</span></li></ol></div></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>3</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">03 · Counts</div><h2>Every count logged and checked</h2><p class="lede"><b>Before:</b> counts from memory or loose printouts, with no record of when an item was last checked. <b>Now:</b> every count timestamped, initialled and compared.</p></header><div class="row"><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/06-count-active.jpg"><div class="hl" style="left:4.071246819338422%;top:28.87323943661972%;width:91.85750636132316%;height:28.4037558685446%"></div>
+      <div class="hl" style="left:50.63613231552163%;top:60.093896713615024%;width:29.770992366412212%;height:3.9906103286384975%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:65.25821596244131%;width:91.85750636132316%;height:3.755868544600939%"></div>
+      </div><div class="pin out" style="top:167.4885496183206px">1</div><div class="pin out" style="top:336.6997455470738px">2</div><div class="pin out" style="top:364.6895674300255px">3</div></div><ol class="legend"><li><span class="n">1</span><span><b>Scan, then enter expected and actual.</b> The last count is shown for context</span></li><li><span class="n">2</span><span>Counts save to the shared sheet in <b>one batch</b></span></li><li><span class="n">3</span><span>Filter to counts <b>outside tolerance</b> or not yet saved</span></li></ol></div><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/07-counts-flagged.jpg"><div class="hl" style="left:4.071246819338422%;top:40.25821596244131%;width:91.85750636132316%;height:9.272300469483568%"></div>
+      </div><div class="pin out" style="top:229.19338422391857px">4</div></div><ol class="legend"><li><span class="n">4</span><span><b>Out-of-tolerance counts</b> stand out and prompt a recount</span></li></ol></div></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>4</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">04 · Consolidations</div><h2>One live list instead of three paper copies</h2><p class="lede"><b>Before:</b> up to three paper copies that didn’t update each other, then re-checking. <b>Now:</b> one list everyone works from.</p></header><div class="row"><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/09-consol-list.jpg"><div class="hl" style="left:4.071246819338422%;top:38.14553990610329%;width:91.85750636132316%;height:13.262910798122066%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:73.59154929577466%;width:91.85750636132316%;height:16.431924882629108%"></div>
+      </div><div class="pin out" style="top:217.74300254452928px">1</div><div class="pin out" style="top:409.85496183206106px">2</div></div><ol class="legend"><li><span class="n">1</span><span><b>Actual Count stepper</b> for each item on HQ’s consolidation list</span></li><li><span class="n">2</span><span><b>Activity log:</b> who closed which box, and when</span></li></ol></div><div class="side"><div class="pw" style="width:260px"><div class="phone" style="width:260px"><img src="img/11-consol-mao.jpg"><div class="hl" style="left:0%;top:77.11267605633803%;width:100%;height:22.887323943661972%"></div>
+      </div><div class="pin out" style="top:428.9389312977099px">3</div></div><ol class="legend"><li><span class="n">3</span><span>Closing a box needs a <b>confirm that it’s closed in MAO too</b>, so the two systems never drift apart</span></li></ol></div></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>5</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">05 · Receiving</div><h2>Paste, scan, done <span class="tag">In testing</span></h2><p class="lede"><b>Before:</b> copy barcodes under PO numbers, photograph, scan, search, tick and initial, twice. <b>Now:</b> in a 5-box test, 1:06 with the app vs 3:25 by hand (not counting the MAO receive step).</p></header><div class="row three"><div class="below"><div class="pw" style="width:236px"><div class="phone" style="width:236px"><img src="img/13-receiving-paste.jpg"><div class="hl" style="left:7.888040712468193%;top:62.558685446009385%;width:84.22391857506362%;height:18.661971830985916%"></div>
+      </div><div class="pin out" style="top:317.50890585241734px">1</div></div><ol class="legend"><li><span class="n">1</span><span><b>Paste the shipment from MAO.</b> Boxes and POs are read automatically</span></li></ol></div><div class="below"><div class="pw" style="width:236px"><div class="phone" style="width:236px"><img src="img/14-receiving-scan.jpg"><div class="hl" style="left:8.142493638676845%;top:28.051643192488264%;width:83.7150127226463%;height:35.2112676056338%"></div>
+      <div class="hl" style="left:8.142493638676845%;top:64.67136150234741%;width:83.7150127226463%;height:4.577464788732395%"></div>
+      </div><div class="pin out" style="top:148.44020356234097px">2</div><div class="pin out" style="top:327.8600508905853px">3</div></div><ol class="legend"><li><span class="n">2</span><span><b>Continuous camera scanning:</b> each box label is matched to its PO</span></li><li><span class="n">3</span><span>Instant feedback on every scan</span></li></ol></div><div class="below"><div class="pw" style="width:236px"><div class="phone" style="width:236px"><img src="img/16-receiving-awaiting.jpg"><div class="hl" style="left:4.071246819338422%;top:8.215962441314554%;width:91.85750636132316%;height:51.64319248826291%"></div>
+      <div class="hl" style="left:4.071246819338422%;top:70.89201877934272%;width:48.346055979643765%;height:5.164319248826291%"></div>
+      </div><div class="pin out" style="top:51.25445292620866px">4</div><div class="pin out" style="top:358.33842239185753px">5</div></div><ol class="legend"><li><span class="n">4</span><span><b>Waiting on MAO:</b> boxes on the shelf but not yet received in MAO</span></li><li><span class="n">5</span><span><b>Two-step handoff:</b> Physically Received, then Received into MAO</span></li></ol></div></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>6</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">06 · Floor Stock</div><h2>From sold to restocked, tracked</h2><p class="lede"><b>Before:</b> printouts and an 86 whiteboard that got wiped. <b>Now:</b> Check Floor, Replen and the 86 Board as one lifecycle.</p></header><div class="row three"><div class="below"><div class="pw" style="width:236px"><div class="phone" style="width:236px"><img src="img/18-floor-sizes.jpg"><div class="hl" style="left:0%;top:66.19718309859155%;width:100%;height:33.80281690140845%"></div>
+      </div><div class="pin out" style="top:335.33587786259545px">1</div></div><ol class="legend"><li><span class="n">1</span><span>Mark <b>which sizes the floor needs</b> for each sold style</span></li></ol></div><div class="below"><div class="pw" style="width:236px"><div class="phone" style="width:236px"><img src="img/19-floor-replen.jpg"><div class="hl" style="left:4.071246819338422%;top:47.183098591549296%;width:91.85750636132316%;height:19.600938967136152%"></div>
+      </div><div class="pin out" style="top:242.17557251908397px">2</div></div><ol class="legend"><li><span class="n">2</span><span><b>Pick list grouped by style:</b> Picked or Out of stock per size</span></li></ol></div><div class="below"><div class="pw" style="width:236px"><div class="phone" style="width:236px"><img src="img/20-floor-86.jpg"><div class="hl" style="left:4.071246819338422%;top:30.985915492957744%;width:91.85750636132316%;height:18.07511737089202%"></div>
+      </div><div class="pin out" style="top:162.81679389312978px">3</div></div><ol class="legend"><li><span class="n">3</span><span>Out of stock goes to the <b>86 Board</b> until it’s restocked</span></li></ol></div></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>7</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">07 · Daily deployment · Google Sheets</div><h2>A deployment that builds itself</h2><p class="lede">For managers: the schedule, roles, breaks and an hourly sales tracker are built at 5am from When I Work. Leads can still edit anything by hand.</p></header>
+    <div class="sheetfull"><div class="sheet" style="width:900px"><img src="sheets/deployment-full-crop.png"><div class="hl sq" style="left:13.645833333333332%;top:2.318840579710145%;width:9.114583333333332%;height:4.154589371980676%"></div><div class="pin" style="left:calc(13.645833333333332% - 10px);top:calc(2.318840579710145% - 10px)">1</div><div class="hl sq" style="left:22.8125%;top:2.318840579710145%;width:76.66666666666667%;height:4.251207729468599%"></div><div class="pin" style="left:calc(99.47916666666667% - 12px);top:calc(2.318840579710145% - 10px)">2</div><div class="hl sq" style="left:13.645833333333332%;top:8.88888888888889%;width:9.114583333333332%;height:15.072463768115943%"></div><div class="pin" style="left:calc(13.645833333333332% - 10px);top:calc(23.96135265700483% - 12px)">3</div><div class="hl sq" style="left:22.8125%;top:8.88888888888889%;width:67.55208333333333%;height:15.072463768115943%"></div><div class="pin" style="left:calc(90.36458333333333% - 12px);top:calc(23.96135265700483% - 12px)">4</div><div class="hl sq" style="left:2.3958333333333335%;top:45.12077294685991%;width:87.96875%;height:25.79710144927536%"></div><div class="pin" style="left:calc(90.36458333333333% - 12px);top:calc(45.12077294685991% - 10px)">5</div><div class="hl sq" style="left:2.3958333333333335%;top:73.14009661835749%;width:97.08333333333333%;height:26.666666666666668%"></div><div class="pin" style="left:calc(99.47916666666666% - 12px);top:calc(73.14009661835749% - 10px)">6</div></div>
+    <ol class="legend cols"><li><span class="n">1</span><span><b>Built automatically</b> each morning from the When I Work schedule</span></li><li><span class="n">2</span><span><b>Goals:</b> daily goal, Strive (1.4× goal), week and month</span></li><li><span class="n">3</span><span><b>Breaks placed by shift length,</b> staggered so the floor stays covered. Grey means no break due</span></li><li><span class="n">4</span><span><b>Colour-coded roles</b> in 15-minute blocks: Product Guide, BOH / Product, Floor Leader</span></li><li><span class="n">5</span><span><b>Hourly Tracker:</b> targets split from the goal, sales filled in by pasting the MAO export. Sales %, AOV, UPT and conversion are calculated</span></li><li><span class="n">6</span><span><b>Hourly Notes</b> in large boxes, one per hour</span></li></ol></div><footer><span>Oakridge Product Suite by Li Snyder</span><span>8</span></footer></section></div><div class="slot"><section class="page"><header class="mh"><div class="kicker">08 · How it fits together</div><h2>Edit the sheet, see it on the phone</h2><p class="lede">Changes made on the sheet reach each associate’s “Your shift today” card within minutes.</p></header>
+    <div class="sheetwide"><div class="sheet" style="width:976px"><img src="sheets/deployment-crop.png"><div class="hl sq" style="left:13.005600497822028%;top:20.424403183023873%;width:8.711885500933416%;height:52.51989389920424%"></div><div class="pin" style="left:calc(13.005600497822028% - 10px);top:calc(20.424403183023873% - 10px)">1</div><div class="hl sq" style="left:60.11200995644057%;top:48.80636604774536%;width:37.08774113254512%;height:14.854111405835543%"></div><div class="pin" style="left:calc(60.11200995644057% - 10px);top:calc(48.80636604774536% - 10px)">2</div></div></div>
+    <div class="fit">
+      <ol class="legend inline"><li><span class="n">1</span><span><b>Move a break</b> by typing a new time or repainting the B cells. The other side updates to match</span></li><li><span class="n">2</span><span><b>Type a code</b> and the block recolours. Touching blocks of the same role merge into one</span></li></ol>
+      <div class="built">
+        <h3>How it’s built</h3>
+        <ul>
+          <li><b>App:</b> a plain-JavaScript progressive web app. Works offline, scans barcodes with the camera, installs to the home screen</li>
+          <li><b>Backend:</b> Google Apps Script on the store’s shared Google Sheet, protected by an access key</li>
+          <li><b>Deployment:</b> reads the When I Work schedule, places breaks under coverage rules and keeps hand edits in sync</li>
+          <li><b>Rollout:</b> ran side by side with the original app, then replaced it in place with no lost work</li>
+        </ul>
+      </div>
+    </div><footer><span>Oakridge Product Suite by Li Snyder</span><span>9</span></footer></section></div></main>
+<script>
+function fit() { document.querySelectorAll('.slot').forEach((s) => { s.firstElementChild.style.transform = 'scale(' + s.clientWidth / 1056 + ')'; }); }
+addEventListener('resize', fit); fit();
+</script></body></html>
